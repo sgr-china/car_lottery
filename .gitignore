@@ -1,0 +1,26 @@
+.classpath
+src/main/resources/*
+.project
+.scala_dependencies
+.worksheet
+.DS_Store
+.idea/*
+hive/*
+*.class
+*.log
+*.iml
+logs
+# sbt specific
+.cache
+.history
+.lib/
+.idea/libraries
+dist/*
+target/
+out/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+
+
