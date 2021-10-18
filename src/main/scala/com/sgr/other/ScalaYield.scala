@@ -1,4 +1,4 @@
-package com.sgr.test
+package com.sgr.other
 
 object ScalaYield {
 
