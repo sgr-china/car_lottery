@@ -1,12 +1,13 @@
 package com.sgr.util
 
-import java.io.{File, FileInputStream, IOException, InputStreamReader}
-import java.util
+import java.io.{File, FileInputStream, InputStreamReader, IOException}
 import java.util.Properties
+
 import scala.collection.JavaConverters._
+
 import com.typesafe.config.{Config, ConfigFactory}
 import com.typesafe.config.ConfigException.Missing
-import org.apache.log4j.PropertyConfigurator
+
 
 object Conf {
   private val confDir = {

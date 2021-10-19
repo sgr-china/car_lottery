@@ -1,7 +1,8 @@
 package com.sgr.other
 
-import org.apache.spark.sql.SparkSession
 import org.apache.spark.{SparkConf, SparkContext}
+import org.apache.spark.sql.SparkSession
+
 
 object MySpark {
 
@@ -17,7 +18,7 @@ object MySpark {
     val list: List[String] = List("spark", "abc")
     val bc = sc.broadcast(list)
 
-
+    // scalastyle:off println
     println(bc.value)
 
     /* val rdd =sc.parallelize(List(1,2,3,4,5,6)).map(_*3)
@@ -29,7 +30,7 @@ object MySpark {
     println("math is work") */
   }
 
-  /*def getValue = {
+  /* def getValue = {
     val conf = new SparkConf().setAppName("sgr_test").setMaster("local[*]")
     val sc = new SparkContext(conf)
     val rdd =sc.parallelize(List(1,2,3,4,5,6)).map(_*3)
@@ -39,6 +40,6 @@ object MySpark {
       print(arg+" ")
     println()
     println("math is work")
-  }*/
+  } */
 
 }

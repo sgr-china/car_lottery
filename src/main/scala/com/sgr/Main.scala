@@ -15,11 +15,11 @@ object Main {
     // 过滤2016年以后的中签数据，且仅抽取中签号码carNum字段
     val filterLuckyDogs: DataFrame = luckyDogsDF.filter(col("batchNum") >= "201601").select("carNum")
     // 摇号数据与中签数据做内关联，Join Key为中签号码carNum
-    val joinDf: DataFrame = applyNumbersDF.join(filterLuckyDogs,Seq("carNum"), "inner")
+    val joinDf: DataFrame = applyNumbersDF.join(filterLuckyDogs, Seq("carNum"), "inner")
     // 统计中签者的倍率 同一个号码在不同的批次中签率是不同的
     // |  201706|0007100221303|         9|
-    //|  201705|0007100221303|         9|
-    //|  201704|0007100221303|         9|
+    // |  201705|0007100221303|         9|
+    // |  201704|0007100221303|         9|
     val multipliers: DataFrame = joinDf.groupBy(col("batchNum"), col("carNum"))
       .agg(count(lit(1)).alias("multiplier"))
 

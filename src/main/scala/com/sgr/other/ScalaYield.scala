@@ -13,6 +13,7 @@ object ScalaYield {
       if file._1.startsWith("java")
       if file._2 == 22
     } yield file
+    // scalastyle:off println
     println(scalaFiles)
   }
 

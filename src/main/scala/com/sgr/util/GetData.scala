@@ -20,7 +20,7 @@ object GetData extends LazyLogging{
 //  logger.info("apply information")
 //  applyNumbersDF.show()
 
-  private val hdfs_path_lucky: String  = s"${rootPath}/lucky"
+  private val hdfs_path_lucky: String = s"${rootPath}/lucky"
   val luckyNumbersDf: DataFrame = sparkSession.read.parquet(hdfs_path_lucky)
 //  logger.info("lucky information")
 //  applyNumbersDF.show()

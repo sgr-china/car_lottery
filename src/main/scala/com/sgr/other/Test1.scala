@@ -1,9 +1,9 @@
 package com.sgr.other
 
-import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
+import org.apache.spark.rdd.RDD
 
-object test1 {
+object Test1 {
 
   def main(args: Array[String]): Unit = {
     // 这里的下划线"_"是占位符，代表数据文件的根目录
@@ -38,7 +38,7 @@ object test1 {
     val wordCount: RDD[(String, Int)] = kvRDD.reduceByKey((x, y) => x + y)
 
     wordCount.collect
-
+    // scalastyle:off println
     println(ac.value)
 
 

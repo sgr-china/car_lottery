@@ -1,8 +1,7 @@
 package com.sgr.util
 
-import org.apache.spark.sql.SparkSession
 import org.apache.spark.{SparkConf, SparkContext}
-import org.slf4j.LoggerFactory
+import org.apache.spark.sql.SparkSession
 
 object SparkSQLEnv {
 
