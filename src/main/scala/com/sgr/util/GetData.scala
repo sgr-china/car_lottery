@@ -13,7 +13,7 @@ object GetData extends LazyLogging{
 
   private val sparkSession = SparkSQLEnv.sparkSession
 
-  private val rootPath: String = "/car_data"
+  private val rootPath: String = Conf.rootPath
 
   private val hdfs_path_apply: String = s"${rootPath}/apply"
   val applyNumbersDF: DataFrame = sparkSession.read.parquet(hdfs_path_apply)
