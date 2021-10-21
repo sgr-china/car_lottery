@@ -86,6 +86,14 @@ object Conf {
   }
 
   val rootPath = getConf[String]("hdfs.path")
+
+
+  val databasePoolSize = getConf[Int]("db.poolSize")
+  val databaseDriver = getConf[String]("db.driver")
+  val databaseUrl = getConf[String]("db.url")
+  val databaseUser = getConf[String]("db.user")
+  val databasePassword = getConf[String]("db.password")
+
 //  val mobiusServerHost = getConf[String]("server.host")
 //  val mobiusServerPort = getConf[Int]("server.port")
 //  val mobiusServerMaxThreads = getConf[Int]("server.maxThreads")
