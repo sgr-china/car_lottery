@@ -68,7 +68,7 @@
             <artifactId>slf4j-api</artifactId>
             <version>1.7.28</version>
         </dependency>
-
+        <!--scala test-->
         <dependency>
             <groupId>org.scalatest</groupId>
             <artifactId>scalatest_2.12</artifactId>
@@ -85,6 +85,7 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.mchange/c3p0 -->
+        <!--数据库操作-->
         <dependency>
             <groupId>com.mchange</groupId>
             <artifactId>c3p0</artifactId>
@@ -96,7 +97,7 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.26</version>
         </dependency>
-
+        <!--异步回调类-->
         <dependency>
             <groupId>io.lettuce</groupId>
             <artifactId>lettuce-core</artifactId>
