@@ -97,6 +97,24 @@
             <version>8.0.26</version>
         </dependency>
 
+        <dependency>
+            <groupId>io.lettuce</groupId>
+            <artifactId>lettuce-core</artifactId>
+            <version>6.1.1.RELEASE</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.guava</groupId>
+                    <artifactId>guava</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>20.0</version>
+        </dependency>
+
     </dependencies>
     <build>
         <finalName>${project.artifactId}</finalName><!--修改编译出来的jar包名，仅为{artifactId}.jar-->
