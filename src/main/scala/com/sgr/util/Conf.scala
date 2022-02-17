@@ -7,6 +7,7 @@ import scala.collection.JavaConverters._
 
 import com.typesafe.config.{Config, ConfigFactory}
 import com.typesafe.config.ConfigException.Missing
+import org.apache.log4j.PropertyConfigurator
 
 
 object Conf {
@@ -21,7 +22,7 @@ object Conf {
 
   def init(): Config = {
     // log4j
-//    PropertyConfigurator.configure(s"${confDir}log4j.properties")
+    PropertyConfigurator.configure(s"${confDir}log4j.properties")
 
     val currentUser = System.getProperty("user.name")
     val userConfig = s"$confDir$currentUser.conf"

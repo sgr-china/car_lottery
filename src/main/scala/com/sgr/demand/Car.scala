@@ -1,6 +1,6 @@
 package com.sgr.demand
 
-import com.sgr.util.GetData
+import com.sgr.util.{GetData, LazyLogging}
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.functions.{col, count, lit, max}
 
@@ -8,7 +8,7 @@ import org.apache.spark.sql.functions.{col, count, lit, max}
  * @author sunguorui
  * @date 2021年10月21日 12:52 下午
  */
-object Car {
+object Car extends LazyLogging{
   def Winning_Rate(): DataFrame = {
     // 需求 1：计算中签率与倍率之间的量化关系
     val luckyDogsDF: DataFrame = GetData.luckyNumbersDf
@@ -32,6 +32,7 @@ object Car {
     val result: DataFrame = uniqueMultipliers.groupBy(col("multiplier"))
       .agg(count(lit(1)).alias("cnt"))
       .orderBy("multiplier")
+    logger.info("计算完毕")
     result
   }
 }
