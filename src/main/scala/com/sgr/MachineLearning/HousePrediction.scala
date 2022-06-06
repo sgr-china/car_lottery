@@ -1,6 +1,7 @@
 package com.sgr.MachineLearning
 
-import com.sgr.util.{LazyLogging, SparkSQLEnv}
+import com.sgr.spark.SparkSQLEnv
+import com.sgr.util.LazyLogging
 import org.apache.spark.ml.feature.VectorAssembler
 import org.apache.spark.ml.regression.LinearRegression
 import org.apache.spark.sql.DataFrame

@@ -1,5 +1,6 @@
 package com.sgr.util
 
+import com.sgr.spark.SparkSQLEnv
 import org.apache.spark.sql.DataFrame
 
 object GetData extends LazyLogging{

@@ -166,15 +166,6 @@ This file is divided into 3 sections:
    of Commons Lang 2 (package org.apache.commons.lang.*)</customMessage>
  </check>
 
- <check level="error" class="org.scalastyle.scalariform.ImportOrderChecker" enabled="true">
-  <parameters>
-   <parameter name="groups">java,scala,3rdParty,pentagon</parameter>
-   <parameter name="group.java">javax?\..*</parameter>
-   <parameter name="group.scala">scala\..*</parameter>
-   <parameter name="group.3rdParty">(?!com\.haizhi\.pentagon\.).*</parameter>
-   <parameter name="group.pentagon">com\.haizhi\.pentagon\..*</parameter>
-  </parameters>
- </check>
 
  <check level="error" class="org.scalastyle.scalariform.DisallowSpaceBeforeTokenChecker" enabled="true">
   <parameters>
